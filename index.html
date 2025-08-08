@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Freshly cooked meals delivered to your door | Premium ingredients | Artisanal food">
+    <meta name="keywords" content="food delivery, gourmet meals, home cooking, online food">
+    <title>Gem188 | Premium Food Delivery</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍴</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f97316',
+                        secondary: '#ea580c',
+                        light: '#fffbeb',
+                        dark: '#431407'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .food-card:hover img {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .cart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .section-gradient {
+            background: linear-gradient(to right, #fffbeb, #fff7ed);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-3xl font-bold text-primary">Gem188</div>
+            </div>
+            
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-dark hover:text-primary transition">Beranda</a></li>
+                    <li><a href="#products" class="text-dark hover:text-primary transition">Menu</a></li>
+                    <li><a href="#about" class="text-dark hover:text-primary transition">Tentang Kami</a></li>
+                    <li><a href="#testimonials" class="text-dark hover:text-primary transition">Ulasan</a></li>
+                    <li><a href="#contact" class="text-dark hover:text-primary transition">Kontak</a></li>
+                </ul>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="relative">
+                    <i class="fas fa-shopping-cart text-primary text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-secondary rounded-full h-5 w-5 text-xs text-white flex items-center justify-center">3</span>
+                </button>
+                <button class="bg-primary hover:bg-secondary px-4 py-2 rounded-full text-white transition">Masuk</button>
+                <button class="md:hidden text-dark">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gray-100">
+        <div class="absolute inset-0 bg-black opacity-30 z-10"></div>
+        <div class="relative z-20 container mx-auto px-4 py-24 flex flex-col items-center text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-4">Perjalanan Kuliner yang Menggugah Selera</h1>
+            <p class="text-xl text-white max-w-2xl mb-8">Disiapkan oleh koki terbaik dengan bahan segar langsung ke rumah Anda</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full text-lg font-medium transition transform hover:-translate-y-1">
+                    Jelajahi Menu Kami
+                </button>
+                <button class="bg-white hover:bg-gray-100 text-primary px-8 py-4 rounded-full text-lg font-medium transition transform hover:-translate-y-1">
+                    Tonton Kisah Kami <i class="fas fa-play ml-2"></i>
+                </button>
+            </div>
+        </div>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d8a56b56-078d-4c03-af43-b0698add2594.png" alt="Perfectly arranged gourmet steak platter with roasted vegetables and herbs on white marble counter" class="absolute inset-0 w-full h-full object-cover z-0">
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-16 section-gradient">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-dark mb-4">Hidangan Andalan Kami</h2>
+                <p class="text-lg max-w-2xl mx-auto">Resep buatan tangan yang disempurnakan selama bertahun-tahun</p>
+                <div class="flex justify-center mt-4">
+                    <div class="h-1 w-16 bg-secondary rounded"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e49a5cf5-f41a-4e1d-bab1-0b13d5db4155.png" alt="Premium Italian pasta with truffle oil and seasonal mushrooms" class="w-full h-64 object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-dark">Truffle Mushroom Pasta</h3>
+                            <span class="text-primary font-bold text-xl">$24.99</span>
+                        </div>
+                        <p class="text-gray-600 my-3">Handmade pasta with wild mushrooms and summer truffle</p>
+                        <div class="flex items-center mt-4 mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600">(127)</span>
+                        </div>
+                        <button class="w-full cart-btn bg-primary hover:bg-secondary text-white py-2 rounded-lg mt-4 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/764f5619-a844-4262-b02f-6e874d9c0061.png" alt="Succulent salmon fillet with lemon butter sauce and seasonal greens" class="w-full h-64 object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-dark">Butter Salmon</h3>
+                            <span class="text-primary font-bold text-xl">$28.99</span>
+                        </div>
+                        <p class="text-gray-600 my-3">Norwegian salmon with lemon-dill butter sauce</p>
+                        <div class="flex items-center mt-4 mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600">(95)</span>
+                        </div>
+                        <button class="w-full cart-btn bg-primary hover:bg-secondary text-white py-2 rounded-lg mt-4 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/44cb3217-8069-4120-a383-a253e3f95fb5.png" alt="Artisanal beef burger with aged cheddar and heirloom tomatoes" class="w-full h-64 object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-dark">Premium Beef Burger</h3>
+                            <span class="text-primary font-bold text-xl">$18.99</span>
+                        </div>
+                        <p class="text-gray-600 my-3">Grass-fed beef with heritage cheddar and brioche bun</p>
+                        <div class="flex items-center mt-4 mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600">(84)</span>
+                        </div>
+                        <button class="w-full cart-btn bg-primary hover:bg-secondary text-white py-2 rounded-lg mt-4 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="food-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fb4c8bdb-18a6-4eb8-932a-1dbd0bae91a2.png" alt="French lavender honey creme brulee with fresh berries" class="w-full h-64 object-cover transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-dark">Crème Brûlée</h3>
+                            <span class="text-primary font-bold text-xl">$12.99</span>
+                        </div>
+                        <p class="text-gray-600 my-3">Classic dessert with lavender honey and summer berries</p>
+                        <div class="flex items-center mt-4 mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600">(63)</span>
+                        </div>
+                        <button class="w-full cart-btn bg-primary hover:bg-secondary text-white py-2 rounded-lg mt-4 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium inline-flex items-center">
+                    Lihat Menu Lengkap 
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bbb23f46-acbf-468e-aa48-4f047311bb5a.png" alt="Professional chef cooking in modern kitchen with copper pans" class="rounded-xl shadow-xl">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-bold text-dark mb-6">Cerita Kami</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Gem188 didirikan dengan semangat menghadirkan pengalaman kuliner istimewa langsung ke rumah Anda.
+                        Kami bekerja sama dengan koki ternama dan pemasok lokal terpercaya untuk menghadirkan bahan dan resep terbaik.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-light p-6 rounded-lg">
+                            <div class="text-primary mb-3">
+                                <i class="fas fa-tractor text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Bahan Segar</h3>
+                            <p>Bahan diambil dalam waktu 48 jam setelah panen</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg">
+                            <div class="text-primary mb-3">
+                                <i class="fas fa-shield-alt text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Jaminan Kualitas</h3>
+                            <p>100% kepuasan atau uang kembali</p>
+                        </div>
+                        <div class="bg-light p-6 rounded-lg">
+                            <div class="text-primary mb-3">
+                                <i class="fas fa-bolt text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-2">Pengantaran Cepat</h3>
+                            <p>Disiapkan & diantar dalam waktu kurang dari 90 menit</p>
+                        </div>
+                    </div>
+                    <button class="px-6 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-full font-medium transition">
+                        Pelajari Cerita Kami
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 section-gradient">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-dark mb-4">Cerita Pelanggan</h2>
+                <p class="max-w-2xl mx-auto text-lg">Apa yang disukai pelanggan kami tentang pengalaman ini</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="text-gray-700 mb-6">
+                        "Salmon dimasak dengan sempurna - saya belum pernah mendapatkan kerak seperti restoran di rumah!"
+                    </blockquote>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"></div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark">Michael Tan</div>
+                            <div class="text-gray-600">Pelanggan setia selama 2 tahun</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="text-gray-700 mb-6">
+                        "Saya memesan pasta untuk kencan malam dan tampilannya persis seperti foto. Pasangan saya pikir saya menghabiskan berjam-jam memasak!"
+                    </blockquote>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"></div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark">Sarah Johnson</div>
+                            <div class="text-gray-600">Pelanggan pertama kali</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <blockquote class="text-gray-700 mb-6">
+                        "Kenyamanan tanpa mengorbankan kualitas tak tertandingi. Solusi makan malam mingguan saya!"
+                    </blockquote>
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16"></div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-dark">David Rodriguez</div>
+                            <div class="text-gray-600">Langganan selama 8 bulan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="text-3xl font-bold text-white mb-4">Gem188</div>
+                    <p class="mb-4 text-gray-300">Menghadirkan makanan berkualitas restoran ke rumah Anda sejak 2010</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Our Menu</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-gray-300 mt-1 mr-3"></i>
+                            <span class="text-gray-300">123 Gourmet Ave, Food District, NY</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone text-gray-300 mt-1 mr-3"></i>
+                            <span class="text-gray-300">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-gray-300 mt-1 mr-3"></i>
+                            <span class="text-gray-300">hello@tastehaven.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-white">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe for exclusive offers and recipes</p>
+                    <form class="flex flex-col space-y-3">
+                        <input type="email" placeholder="Your email address" class="bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <button type="submit" class="bg-primary hover:bg-secondary text-white py-2 rounded font-medium">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>© 2023 Gem188. All rights reserved.</p>
+                <p class="mt-2">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuBtn = document.querySelector('button[class*="md:hidden"]');
+            const menu = document.querySelector('nav');
+            
+            menuBtn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('block');
+                
+                const barsIcon = menuBtn.querySelector('i');
+                if (barsIcon.classList.contains('fa-bars')) {
+                    barsIcon.classList.remove('fa-bars');
+                    barsIcon.classList.add('fa-times');
+                } else {
+                    barsIcon.classList.remove('fa-times');
+                    barsIcon.classList.add('fa-bars');
+                }
+            });
+            
+            // Cart animation
+            document.querySelectorAll('.cart-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.innerHTML = '<i class="fas fa-check mr-2"></i> Added!';
+                    this.classList.remove('bg-primary');
+                    this.classList.add('bg-green-500');
+                    
+                    setTimeout(() => {
+                        this.innerHTML = 'Add to Cart';
+                        this.classList.remove('bg-green-500');
+                        this.classList.add('bg-primary');
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
